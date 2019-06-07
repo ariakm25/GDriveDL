@@ -47,7 +47,7 @@ $ node app.js -d "<URL1>,<URL2>,..."
 ```
 ## Download Batch File From list.txt
 
-first create list.txt
+create list.txt
 ```
 https://drive.google.com/xxxx
 https://drive.google.com/xxxx
@@ -58,6 +58,10 @@ https://drive.google.com/xxxx
 then run :
 ```
 $ gddl -b list.txt
+```
+or 
+```
+$ npm run bulk
 ```
 
 ## Show Help
