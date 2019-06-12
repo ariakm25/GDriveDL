@@ -50,6 +50,10 @@ const GetLink = (url, cb) => {
                 _json = result.slice(4);
                 dlurl = JSON.parse(_json);
                 console.log(_colors.green('Done'));
+                if(dlurl.downloadUrl === undefined) {
+                    console.log(_colors.red('Link Download LIMIT ! Skipped to next url'));
+                    return cb();
+                }
                 console.log(_colors.yellow('Start Download From URL : ' + dlurl.downloadUrl));
                 dLoad(dlurl, cb);
             }).catch(e => console.log(e))
