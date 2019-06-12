@@ -56,7 +56,10 @@ const GetLink = (url, cb) => {
                 }
                 console.log(_colors.yellow('Start Download From URL : ' + dlurl.downloadUrl));
                 dLoad(dlurl, cb);
-            }).catch(e => console.log(e))
+            }).catch(() => {
+                console.log(_colors.red('File not Found!, skipped to next url.');
+                return cb();
+            });
 
         });
     });
